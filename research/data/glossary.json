@@ -1,0 +1,2242 @@
+{
+    "concepts": {
+        "A.1": {
+            "label": "artificial intelligence",
+            "content": "A non-human program or model that can solve sophisticated tasks.\nFor example, a program or model that translates text or a program or model that\nidentifies diseases from radiologic images both exhibit artificial intelligence. Formally, machine learning is a sub-field of artificial\nintelligence. However, in recent years, some organizations have begun using the\nterms artificial intelligence and machine learning interchangeably.",
+            "status": "mastery",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.19",
+                "A.32",
+                "A.35"
+            ],
+            "section": "A"
+        },
+        "A.2": {
+            "label": "binary classification",
+            "content": "A type of classification task that\npredicts one of two mutually exclusive classes: the positive class the negative class For example, the following two machine learning models each perform\nbinary classification: A model that determines whether email messages are\nspam (the positive class) or not spam (the negative class). A model that evaluates medical symptoms to determine whether a person\nhas a particular disease (the positive class) or doesn't have that\ndisease (the negative class). Contrast with multi-class classification. See also logistic regression and\nclassification threshold. See Classification\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "E.24",
+                "E.18",
+                "A.21",
+                "A.16",
+                "A.4"
+            ],
+            "section": "A"
+        },
+        "A.3": {
+            "label": "classification model",
+            "content": "A model whose prediction is a class.\nFor example, the following are all classification models: A model that predicts an input sentence's language (French? Spanish?\nItalian?). A model that predicts tree species (Maple? Oak? Baobab?). A model that predicts the positive or negative class for a particular\nmedical condition. In contrast, regression models predict numbers\nrather than classes. Two common types of classification models are: binary classification multi-class classification",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.2",
+                "A.3",
+                "A.4",
+                "A.21",
+                "E.5",
+                "E.6",
+                "E.15",
+                "E.17",
+                "E.18",
+                "E.24",
+                "A.28",
+                "A.2",
+                "A.21",
+                "A.16",
+                "A.18"
+            ],
+            "section": "A"
+        },
+        "A.4": {
+            "label": "classification threshold",
+            "content": "In a binary classification, a\nnumber between 0 and 1 that converts the raw output of a\nlogistic regression model\ninto a prediction of either the positive class\nor the negative class.\nNote that the classification threshold is a value that a human chooses,\nnot a value chosen by model training. A logistic regression model outputs a raw value between 0 and 1. Then: If this raw value is greater than the classification threshold, then\nthe positive class is predicted. If this raw value is less than the classification threshold, then\nthe negative class is predicted. For example, suppose the classification threshold is 0.8. If the raw value\nis 0.9, then the model predicts the positive class. If the raw value is\n0.7, then the model predicts the negative class. The choice of classification threshold strongly influences the number of\nfalse positives and\nfalse negatives. See Thresholds and the confusion\nmatrix\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.2",
+                "A.16",
+                "E.24",
+                "E.18",
+                "C.4",
+                "C.5",
+                "C.3",
+                "A.5",
+                "C.2",
+                "C.7"
+            ],
+            "section": "A"
+        },
+        "A.5": {
+            "label": "confusion matrix",
+            "content": "An NxN table that summarizes the number of correct and incorrect predictions\nthat a classification model made.\nFor example, consider the following confusion matrix for a\nbinary classification model: The preceding confusion matrix shows the following: Of the 19 predictions in which ground truth was Tumor,\nthe model correctly classified 18 and incorrectly classified 1. Of the 458 predictions in which ground truth was Non-Tumor, the model\ncorrectly classified 452 and incorrectly classified 6. The confusion matrix for a multi-class classification\nproblem can help you identify patterns of mistakes.\nFor example, consider the following confusion matrix for a 3-class\nmulti-class classification model that categorizes three different iris types\n(Virginica, Versicolor, and Setosa). When the ground truth was Virginica, the\nconfusion matrix shows that the model was far more likely to mistakenly\npredict Versicolor than Setosa: As yet another example, a confusion matrix could reveal that a model trained\nto recognize handwritten digits tends to mistakenly predict 9 instead of 4,\nor mistakenly predict 1 instead of 7. Confusion matrixes contain sufficient information to calculate a\nvariety of performance metrics, including precision\nand recall.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.2",
+                "A.21",
+                "C.11",
+                "C.4",
+                "C.5",
+                "C.3",
+                "A.4"
+            ],
+            "section": "A"
+        },
+        "A.6": {
+            "label": "dataset",
+            "content": "A collection of raw data, commonly (but not exclusively) organized in one\nof the following formats: a spreadsheet a file in CSV (comma-separated values) format",
+            "status": "",
+            "prerequisites": [
+                "E.8",
+                "A.34",
+                "A.36",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20"
+            ],
+            "section": "A"
+        },
+        "A.7": {
+            "label": "dynamic model",
+            "content": "A model that is frequently (maybe even continuously)\nretrained. A dynamic model is a \"lifelong learner\" that\nconstantly adapts to evolving data. A dynamic model is also known as an\nonline model. Contrast with static model.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.30"
+            ],
+            "section": "A"
+        },
+        "A.8": {
+            "label": "feature",
+            "content": "An input variable to a machine learning model. An example\nconsists of one or more features. For instance, suppose you are training a\nmodel to determine the influence of weather conditions on student test scores.\nThe following table shows three examples, each of which contains\nthree features and one label: Contrast with label. See Supervised Learning\nin the Introduction to Machine Learning course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.10",
+                "E.14",
+                "E.30",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.32",
+                "A.35",
+                "E.12",
+                "E.13",
+                "E.7",
+                "E.4"
+            ],
+            "section": "A"
+        },
+        "A.9": {
+            "label": "hyperparameter",
+            "content": "The variables that you or a hyperparameter tuning service\n\nadjust during successive runs of training a model. For example,\nlearning rate is a hyperparameter. You could\nset the learning rate to 0.01 before one training session. If you\ndetermine that 0.01 is too high, you could perhaps set the learning\nrate to 0.003 for the next training session. In contrast, parameters are the various\nweights and bias that the model\nlearns during training. See Linear regression:\nHyperparameters\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.17",
+                "A.9",
+                "A.26",
+                "B.29",
+                "D.19",
+                "D.2",
+                "A.15",
+                "E.2",
+                "B.10"
+            ],
+            "section": "A"
+        },
+        "A.10": {
+            "label": "inference",
+            "content": "In machine learning, the process of making predictions by\napplying a trained model to unlabeled examples. Inference has a somewhat different meaning in statistics.\nSee the\n\nWikipedia article on statistical inference for details. See Supervised Learning\nin the Intro to ML course to see inference's role in a supervised\nlearning system.",
+            "status": "",
+            "prerequisites": [
+                "E.30",
+                "A.27",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "D.7"
+            ],
+            "section": "A"
+        },
+        "A.11": {
+            "label": "interpretability",
+            "content": "The ability to explain or to present an ML model's reasoning in\nunderstandable terms to a human. Most linear regression models, for example, are highly\ninterpretable. (You merely need to look at the trained weights for each\nfeature.) Decision forests are also highly interpretable. Some models, however,\nrequire sophisticated visualization to become interpretable. You can use the\nLearning Interpretability Tool (LIT)\nto interpret ML models.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.15"
+            ],
+            "section": "A"
+        },
+        "A.12": {
+            "label": "label",
+            "content": "In supervised machine learning, the\n\"answer\" or \"result\" portion of an example. Each labeled example consists of one or more\nfeatures and a label. For example, in a spam\ndetection dataset, the label would probably be either \"spam\" or\n\"not spam.\" In a rainfall dataset, the label might be the amount of\nrain that fell during a certain period. See Supervised Learning\nin Introduction to Machine Learning for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.32",
+                "A.35",
+                "E.10",
+                "E.14",
+                "E.30",
+                "E.14",
+                "E.30",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.3"
+            ],
+            "section": "A"
+        },
+        "A.13": {
+            "label": "linear ",
+            "content": "A relationship between two or more variables that can be represented solely\nthrough addition and multiplication. The plot of a linear relationship is a line. Contrast with nonlinear.",
+            "status": "",
+            "prerequisites": [
+                "A.22",
+                "A.15",
+                "A.14"
+            ],
+            "section": "A"
+        },
+        "A.14": {
+            "label": "linear model",
+            "content": "A model that assigns one weight per\nfeature to make predictions.\n(Linear models also incorporate a bias.) In contrast,\nthe relationship of features to predictions in deep models\nis generally nonlinear. Linear models are usually easier to train and more\ninterpretable than deep models. However,\ndeep models can learn complex relationships between features. Linear regression and\nlogistic regression are two types of linear models.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "B.29",
+                "D.19",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.27",
+                "D.2",
+                "D.3",
+                "A.11",
+                "A.15",
+                "A.16"
+            ],
+            "section": "A"
+        },
+        "A.15": {
+            "label": "linear regression",
+            "content": "A type of machine learning model in which both of the following are true: The model is a linear model. The prediction is a floating-point value. (This is the\nregression part of linear regression.) Contrast linear regression with logistic regression.\nAlso, contrast regression with classification. See Linear regression\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.14",
+                "A.15",
+                "A.16",
+                "A.28",
+                "A.16",
+                "A.3",
+                "A.18"
+            ],
+            "section": "A"
+        },
+        "A.16": {
+            "label": "logistic regression",
+            "content": "A type of regression model that predicts a probability.\nLogistic regression models have the following characteristics: The label is categorical. The term logistic\nregression usually refers to binary logistic regression, that is,\nto a model that calculates probabilities for labels with two possible values.\nA less common variant, multinomial logistic regression, calculates\nprobabilities for labels with more than two possible values. The loss function during training is Log Loss.\n(Multiple Log Loss units can be placed in parallel for labels\nwith more than two possible values.) The model has a linear architecture, not a deep neural network.\nHowever, the remainder of this definition also applies to\ndeep models that predict probabilities\nfor categorical labels. For example, consider a logistic regression model that calculates the\nprobability of an input email being either spam or not spam.\nDuring inference, suppose the model predicts 0.72. Therefore, the\nmodel is estimating: A 72% chance of the email being spam. A 28% chance of the email not being spam. A logistic regression model uses the following two-step architecture: Like any regression model, a logistic regression model predicts a number.\nHowever, this number typically becomes part of a binary classification\nmodel as follows: If the predicted number is greater than the\nclassification threshold, the\nbinary classification model predicts the positive class. If the predicted number is less than the classification threshold,\nthe binary classification model predicts the negative class. See Logistic regression\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.28",
+                "E.4",
+                "C.6",
+                "D.3",
+                "A.4",
+                "A.16",
+                "A.2"
+            ],
+            "section": "A"
+        },
+        "A.17": {
+            "label": "loss",
+            "content": "During the training of a\nsupervised model, a measure of how far a\nmodel's prediction is from its label. A loss function calculates the loss. See Linear regression: Loss\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.32",
+                "A.35",
+                "A.27",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.18",
+                "A.15",
+                "B.9",
+                "B.22"
+            ],
+            "section": "A"
+        },
+        "A.18": {
+            "label": "loss function",
+            "content": "During training or testing, a\nmathematical function that calculates the\nloss on a batch of examples. A loss function returns a lower loss\nfor models that makes good predictions than for models that make\nbad predictions. The goal of training is typically to minimize the loss that a loss function\nreturns. Many different kinds of loss functions exist. Pick the appropriate loss\nfunction for the kind of model you are building. For example: L2 loss (or Mean Squared Error)\nis the loss function for linear regression. Log Loss is the loss function for\nlogistic regression.",
+            "status": "",
+            "prerequisites": [
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "E.1",
+                "E.2",
+                "E.16",
+                "B.14",
+                "A.15",
+                "C.6",
+                "A.16"
+            ],
+            "section": "A"
+        },
+        "A.19": {
+            "label": "machine learning",
+            "content": "A program or system that trains a\nmodel from input data. The trained model can\nmake useful predictions from new (never-before-seen) data drawn from\nthe same distribution as the one used to train the model. Machine learning also refers to the field of study concerned\nwith these programs or systems. See the Introduction to Machine Learning\ncourse for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20"
+            ],
+            "section": "A"
+        },
+        "A.20": {
+            "label": "model",
+            "content": "In general, any mathematical construct that processes input data and returns\noutput. Phrased differently, a model is the set of parameters and structure\nneeded for a system to make predictions.\nIn supervised machine learning,\na model takes an example as input and infers a\nprediction as output. Within supervised machine learning,\nmodels differ somewhat. For example: A linear regression model consists of a set of weights\nand a bias. A neural network model consists of:\n\nA set of hidden layers, each containing one or\nmore neurons.\nThe weights and bias associated with each neuron. A set of hidden layers, each containing one or\nmore neurons. The weights and bias associated with each neuron. A decision tree model consists of:\n\nThe shape of the tree; that is, the pattern in which the conditions\nand leaves are connected.\nThe conditions and leaves. The shape of the tree; that is, the pattern in which the conditions\nand leaves are connected. The conditions and leaves. You can save, restore, or make copies of a model. Unsupervised machine learning also\ngenerates models, typically a function that can map an input example to\nthe most appropriate cluster.",
+            "status": "",
+            "prerequisites": [
+                "A.32",
+                "A.35",
+                "E.10",
+                "E.14",
+                "E.30",
+                "A.27",
+                "B.29",
+                "D.19",
+                "D.2",
+                "D.11",
+                "D.8",
+                "D.12",
+                "A.35"
+            ],
+            "section": "A"
+        },
+        "A.21": {
+            "label": "multi-class classification",
+            "content": "In supervised learning, a classification problem\nin which the dataset contains more than two classes of labels.\nFor example, the labels in the Iris dataset must be one of the following\nthree classes: Iris setosa Iris virginica Iris versicolor A model trained on the Iris dataset that predicts Iris type on new examples\nis performing multi-class classification. In contrast, classification problems that distinguish between exactly two\nclasses are binary classification models.\nFor example, an email model that predicts either spam or not spam\nis a binary classification model. In clustering problems, multi-class classification refers to more than\ntwo clusters. See Neural networks: Multi-class classification\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.2",
+                "A.3",
+                "A.4",
+                "A.21",
+                "E.5",
+                "E.6",
+                "E.15",
+                "E.17",
+                "E.18",
+                "E.24",
+                "A.2",
+                "D.11",
+                "D.17"
+            ],
+            "section": "A"
+        },
+        "A.22": {
+            "label": "nonlinear ",
+            "content": "A relationship between two or more variables that can't be represented solely\nthrough addition and multiplication. A linear relationship\ncan be represented as a line; a nonlinear relationship can't be\nrepresented as a line. For example, consider two models that each relate\na single feature to a single label. The model on the left is linear\nand the model on the right is nonlinear: See Neural networks: Nodes and hidden layers\nin Machine Learning Crash Course to experiment with different kinds\nof nonlinear functions.",
+            "status": "",
+            "prerequisites": [
+                "D.1",
+                "D.15",
+                "D.16"
+            ],
+            "section": "A"
+        },
+        "A.23": {
+            "label": "nonstationarity",
+            "content": "A feature whose values change across one or more dimensions, usually time.\nFor example, consider the following examples of nonstationarity: The number of swimsuits sold at a particular store varies with the season. The quantity of a particular fruit harvested in a particular region\nis zero for much of the year but large for a brief period. Due to climate change, annual mean temperatures are shifting. Contrast with stationarity.",
+            "status": "",
+            "prerequisites": [
+                "A.23",
+                "A.31"
+            ],
+            "section": "A"
+        },
+        "A.24": {
+            "label": "offline inference",
+            "content": "The process of a model generating a batch of predictions\nand then caching (saving) those predictions. Apps can then access the inferred\nprediction from the cache rather than rerunning the model. For example, consider a model that generates local weather forecasts\n(predictions) once every four hours. After each model run, the system\ncaches all the local weather forecasts. Weather apps retrieve the forecasts\nfrom the cache. Offline inference is also called static inference. Contrast with online inference. See Production ML systems: Static versus dynamic inference\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.27",
+                "A.25"
+            ],
+            "section": "A"
+        },
+        "A.25": {
+            "label": "online inference",
+            "content": "Generating predictions on demand. For example,\nsuppose an app passes input to a model and issues a request for a\nprediction.\nA system using online inference responds to the request by running\nthe model (and returning the prediction to the app). Contrast with offline inference. See Production ML systems: Static versus dynamic inference\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.27",
+                "A.24"
+            ],
+            "section": "A"
+        },
+        "A.26": {
+            "label": "parameter",
+            "content": "The weights and biases that a model learns during\ntraining. For example, in a\nlinear regression model, the parameters consist of\nthe bias (b) and all the weights (w1, w2,\nand so on) in the following formula: In contrast, hyperparameters are the values that\nyou (or a hyperparameter tuning service) supply to the model.\nFor example, learning rate is a hyperparameter.",
+            "status": "",
+            "prerequisites": [
+                "B.29",
+                "D.19",
+                "D.2",
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.15",
+                "A.9",
+                "B.17"
+            ],
+            "section": "A"
+        },
+        "A.27": {
+            "label": "prediction",
+            "content": "A model's output. For example: The prediction of a binary classification model is either the positive\nclass or the negative class. The prediction of a multi-class classification model is one class. The prediction of a linear regression model is a number.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.10",
+                "A.24",
+                "A.25",
+                "E.30"
+            ],
+            "section": "A"
+        },
+        "A.28": {
+            "label": "regression model",
+            "content": "Informally, a model that generates a numerical prediction. (In contrast,\na classification model generates a class\nprediction.) For example, the following are all regression models: A model that predicts a certain house's value in Euros, such as 423,000. A model that predicts a certain tree's life expectancy in years,\nsuch as 23.2. A model that predicts the amount of rain in inches that will fall in a\ncertain city over the next six hours, such as 0.18. Two common types of regression models are: Linear regression, which finds the line that best\nfits label values to features. Logistic regression, which generates a\nprobability between 0.0 and 1.0 that a system typically then maps to a class\nprediction. Not every model that outputs numerical predictions is a regression model.\nIn some cases, a numeric prediction is really just a classification model\nthat happens to have numeric class names. For example, a model that predicts\na numeric postal code is a classification model, not a regression model.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.15",
+                "A.16"
+            ],
+            "section": "A"
+        },
+        "A.29": {
+            "label": "retrieval-augmented generation",
+            "content": "A technique for improving the quality of\nlarge language model (LLM) output\nby grounding it with sources of knowledge retrieved after the model was trained.\nRAG improves the accuracy of LLM responses by providing the trained LLM with\naccess to information retrieved from trusted knowledge bases or documents. Common motivations to use retrieval-augmented generation include: Increasing the factual accuracy of a model's generated responses. Giving the model access to knowledge it was not trained on. Changing the knowledge that the model uses. Enabling the model to cite sources. For example, suppose that a chemistry app uses the PaLM\nAPI to generate summaries\nrelated to user queries. When the app's backend receives a query, the backend:",
+            "status": "",
+            "prerequisites": [
+                "D.20"
+            ],
+            "section": "A"
+        },
+        "A.30": {
+            "label": "static model",
+            "content": "Something done once rather than continuously.\nThe terms static and offline are synonyms.\nThe following are common uses of static and offline in machine\nlearning: static model (or offline model) is a model trained once and then\nused for a while. static training (or offline training) is the process of training a\nstatic model. static inference (or offline inference) is a\nprocess in which a model generates a batch of predictions at a time. Contrast with dynamic.",
+            "status": "",
+            "prerequisites": [
+                "A.7"
+            ],
+            "section": "A"
+        },
+        "A.31": {
+            "label": "stationarity",
+            "content": "A feature whose values don't change across one or more dimensions, usually time.\nFor example, a feature whose values look about the same in 2021 and\n2023 exhibits stationarity. In the real world, very few features exhibit stationarity. Even features\nsynonymous with stability (like sea level) change over time. Contrast with nonstationarity.",
+            "status": "",
+            "prerequisites": [
+                "A.23"
+            ],
+            "section": "A"
+        },
+        "A.32": {
+            "label": "supervised machine learning",
+            "content": "Training a model from features and their\ncorresponding labels. Supervised machine learning is analogous\nto learning a subject by studying a set of questions and their\ncorresponding answers. After mastering the mapping between questions and\nanswers, a student can then provide answers to new (never-before-seen)\nquestions on the same topic. Compare with\nunsupervised machine learning. See Supervised Learning\nin the Introduction to ML course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.35"
+            ],
+            "section": "A"
+        },
+        "A.33": {
+            "label": "training",
+            "content": "The process of determining the ideal parameters (weights and\nbiases) comprising a model. During training, a system reads in\nexamples and gradually adjusts parameters. Training uses each\nexample anywhere from a few times to billions of times. See Supervised Learning\nin the Introduction to ML course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.9",
+                "A.26",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "E.10",
+                "E.14",
+                "E.30",
+                "A.32",
+                "A.35"
+            ],
+            "section": "A"
+        },
+        "A.34": {
+            "label": "training set",
+            "content": "The subset of the dataset used to train a model. Traditionally, examples in the dataset are divided into the following three\ndistinct subsets: a training set a validation set a test set Ideally, each example in the dataset should belong to only one of the\npreceding subsets. For example, a single example shouldn't belong to\nboth the training set and the validation set. See Datasets: Dividing the original dataset\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.6",
+                "E.6",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.36"
+            ],
+            "section": "A"
+        },
+        "A.35": {
+            "label": "unsupervised machine learning",
+            "content": "Training a model to find patterns in a dataset, typically an\nunlabeled dataset. The most common use of unsupervised machine learning is to\ncluster data\ninto groups of similar examples. For example, an unsupervised machine\nlearning algorithm can cluster songs based on various properties\nof the music. The resulting clusters can become an input to other machine\nlearning algorithms (for example, to a music recommendation service).\nClustering can help when useful labels are scarce or absent.\nFor example, in domains such as anti-abuse and fraud, clusters can help\nhumans better understand the data. Contrast with supervised machine learning. See What is Machine Learning?\nin the Introduction to ML course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.32",
+                "A.35",
+                "A.19",
+                "A.32",
+                "A.35"
+            ],
+            "section": "A"
+        },
+        "A.36": {
+            "label": "validation set",
+            "content": "The subset of the dataset that performs initial\nevaluation against a trained model. Typically, you evaluate\nthe trained model against the validation set several\ntimes before evaluating the model against the test set. Traditionally, you divide the examples in the dataset into the following three\ndistinct subsets: a training set a validation set a test set Ideally, each example in the dataset should belong to only one of the\npreceding subsets. For example, a single example shouldn't belong to\nboth the training set and the validation set. See Datasets: Dividing the original dataset\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.6",
+                "E.6",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.36",
+                "A.34"
+            ],
+            "section": "A"
+        },
+        "B.1": {
+            "label": "backpropagation",
+            "content": "The algorithm that implements\ngradient descent in\nneural networks. Training a neural network involves many iterations\nof the following two-pass cycle: Neural networks often contain many neurons across many hidden layers.\nEach of those neurons contribute to the overall loss in different ways.\nBackpropagation determines whether to increase or decrease the weights\napplied to particular neurons. The learning rate is a multiplier that controls the\ndegree to which each backward pass increases or decreases each weight.\nA large learning rate will increase or decrease each weight more than a\nsmall learning rate. In calculus terms, backpropagation implements the\nchain rule.\nfrom calculus. That is, backpropagation calculates the\npartial derivative of the error with\nrespect to each parameter. Years ago, ML practitioners had to write code to implement backpropagation.\nModern ML APIs like Keras now implement backpropagation for you. Phew! See Neural networks\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.9",
+                "B.22",
+                "D.11",
+                "B.10",
+                "E.1",
+                "E.2",
+                "E.16",
+                "E.10",
+                "E.14",
+                "E.30",
+                "B.17",
+                "B.29",
+                "D.19",
+                "D.2"
+            ],
+            "section": "B"
+        },
+        "B.2": {
+            "label": "clipping",
+            "content": "A technique for handling outliers by doing\neither or both of the following: Reducing feature values that are greater than a maximum\nthreshold down to that maximum threshold. Increasing feature values that are less than a minimum threshold up to that\nminimum threshold. For example, suppose that <0.5% of values for a particular feature fall\noutside the range 40\u201360. In this case, you could do the following: Clip all values over 60 (the maximum threshold) to be exactly 60. Clip all values under 40 (the minimum threshold) to be exactly 40. Outliers can damage models, sometimes causing weights\nto overflow during training. Some outliers can also dramatically spoil\nmetrics like accuracy. Clipping is a common technique to limit\nthe damage. Gradient clipping forces\ngradient values within a designated range during training. See Numerical data:\nNormalization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "B.29",
+                "D.19",
+                "C.1",
+                "B.9",
+                "B.22",
+                "E.20",
+                "E.19",
+                "E.31"
+            ],
+            "section": "B"
+        },
+        "B.3": {
+            "label": "convergence",
+            "content": "A state reached when loss values change very little or\nnot at all with each iteration. For example, the following\nloss curve suggests convergence at around 700 iterations: A model converges when additional training won't\nimprove the model. In deep learning, loss values sometimes stay constant or\nnearly so for many iterations before finally descending. During a long period\nof constant loss values, you may temporarily get a false sense of convergence. See also early stopping. See Model convergence and loss\ncurves\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.17",
+                "A.18",
+                "B.12",
+                "B.14",
+                "B.18",
+                "B.23",
+                "B.24",
+                "B.28",
+                "C.6",
+                "C.8",
+                "B.10",
+                "B.18",
+                "D.3",
+                "B.4",
+                "B.17"
+            ],
+            "section": "B"
+        },
+        "B.4": {
+            "label": "early stopping",
+            "content": "A method for regularization that involves ending\ntraining before training loss finishes\ndecreasing. In early stopping, you intentionally stop training the model\nwhen the loss on a validation dataset starts to\nincrease; that is, when\ngeneralization performance worsens.",
+            "status": "",
+            "prerequisites": [
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21",
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "B.7",
+                "B.8",
+                "B.19"
+            ],
+            "section": "B"
+        },
+        "B.5": {
+            "label": "epoch",
+            "content": "A full training pass over the entire training set\nsuch that each example has been processed once. An epoch represents N/batch size\ntraining iterations, where N is the\ntotal number of examples. For instance, suppose the following: The dataset consists of 1,000 examples. The batch size is 50 examples. Therefore, a single epoch requires 20 iterations: See Linear regression:\nHyperparameters\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.10",
+                "E.14",
+                "E.30",
+                "E.2",
+                "B.10",
+                "A.15",
+                "A.9",
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25"
+            ],
+            "section": "B"
+        },
+        "B.6": {
+            "label": "feedback loop",
+            "content": "In machine learning, a situation in which a model's predictions influence the\ntraining data for the same model or another model. For example, a model that\nrecommends movies will influence the movies that people see, which will then\ninfluence subsequent movie recommendation models. See Production ML systems: Questions to\nask\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "B.10"
+            ],
+            "section": "B"
+        },
+        "B.7": {
+            "label": "generalization",
+            "content": "A model's ability to make correct predictions on new,\npreviously unseen data. A model that can generalize is the opposite\nof a model that is overfitting. See Generalization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "B.19",
+                "B.4"
+            ],
+            "section": "B"
+        },
+        "B.8": {
+            "label": "generalization curve",
+            "content": "A plot of both training loss and\nvalidation loss as a function of the number of\niterations. A generalization curve can help you detect possible\noverfitting. For example, the following\ngeneralization curve suggests overfitting because validation loss\nultimately becomes significantly higher than training loss. See Generalization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.24",
+                "B.28",
+                "B.10",
+                "B.19",
+                "B.7",
+                "B.8",
+                "B.18"
+            ],
+            "section": "B"
+        },
+        "B.9": {
+            "label": "gradient descent",
+            "content": "A mathematical technique to minimize loss.\nGradient descent iteratively adjusts\nweights and biases,\ngradually finding the best combination to minimize loss. Gradient descent is older\u2014much, much older\u2014than machine learning. See the Linear regression: Gradient\ndescent\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.17",
+                "A.18",
+                "B.12",
+                "B.14",
+                "B.18",
+                "B.23",
+                "B.24",
+                "B.28",
+                "C.6",
+                "C.8",
+                "B.29",
+                "D.19",
+                "D.2",
+                "A.15",
+                "B.1",
+                "B.17"
+            ],
+            "section": "B"
+        },
+        "B.10": {
+            "label": "iteration",
+            "content": "A single update of a model's parameters\u2014the model's\nweights and biases\u2014during\ntraining. The batch size determines\nhow many examples the model processes in a single iteration. For instance,\nif the batch size is 20, then the model processes 20 examples before\nadjusting the parameters. When training a neural network, a single iteration\ninvolves the following two passes: See Gradient\ndescent\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "B.29",
+                "D.19",
+                "D.2",
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "E.2"
+            ],
+            "section": "B"
+        },
+        "B.11": {
+            "label": "l0 regularization",
+            "content": "A type of regularization that\npenalizes the total number of nonzero weights\nin a model. For example, a model having 11 nonzero weights\nwould be penalized more than a similar model having 10 nonzero weights. L0 regularization is sometimes called L0-norm regularization.",
+            "status": "",
+            "prerequisites": [
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21",
+                "B.29",
+                "D.19"
+            ],
+            "section": "B"
+        },
+        "B.12": {
+            "label": "l1 loss",
+            "content": "A loss function that calculates the absolute value\nof the difference between actual label values and\nthe values that a model predicts. For example, here's the\ncalculation of L1 loss for a batch of five\nexamples: L1 loss is less sensitive to outliers\nthan L2 loss. The Mean Absolute Error is the average\nL1 loss per example. See\nLinear regression: Loss\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.18",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "E.1",
+                "E.2",
+                "E.16",
+                "E.10",
+                "E.14",
+                "E.30",
+                "A.16"
+            ],
+            "section": "B"
+        },
+        "B.13": {
+            "label": "l1 regularization",
+            "content": "A type of regularization that penalizes\nweights in proportion to the sum of the absolute value of\nthe weights. L1 regularization helps drive the weights of irrelevant\nor barely relevant features to exactly 0. A feature with\na weight of 0 is effectively removed from the model. Contrast with L2 regularization.",
+            "status": "",
+            "prerequisites": [
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21",
+                "B.29",
+                "D.19",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "B.15",
+                "A.15"
+            ],
+            "section": "B"
+        },
+        "B.14": {
+            "label": "l2 loss",
+            "content": "A loss function that calculates the square\nof the difference between actual label values and\nthe values that a model predicts. For example, here's the\ncalculation of L2 loss for a batch of five\nexamples: Due to squaring, L2 loss amplifies the influence of\noutliers.\nThat is, L2 loss reacts more strongly to bad predictions than\nL1 loss. For example, the L1 loss\nfor the preceding batch would be 8 rather than 16. Notice that a single\noutlier accounts for 9 of the 16. Regression models typically use L2 loss\nas the loss function. The Mean Squared Error is the average\nL2 loss per example.\nSquared loss is another name for L2 loss. See Logistic regression: Loss and\nregularization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.18",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "E.1",
+                "E.2",
+                "E.16",
+                "E.10",
+                "E.14",
+                "E.30",
+                "A.15"
+            ],
+            "section": "B"
+        },
+        "B.15": {
+            "label": "l2 regularization",
+            "content": "A type of regularization that penalizes\nweights in proportion to the sum of the squares of the weights.\nL2 regularization helps drive outlier weights (those\nwith high positive or low negative values) closer to 0 but not quite to 0.\nFeatures with values very close to 0 remain in the model\nbut don't influence the model's prediction very much. L2 regularization always improves generalization in\nlinear models. Contrast with L1 regularization. See Overfitting: L2\nregularization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21",
+                "B.29",
+                "D.19",
+                "A.14",
+                "B.13",
+                "B.19"
+            ],
+            "section": "B"
+        },
+        "B.16": {
+            "label": "lambda",
+            "content": "Synonym for regularization rate. Lambda is an overloaded term. Here we're focusing on the term's\ndefinition within regularization.",
+            "status": "",
+            "prerequisites": [
+                "B.21",
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21"
+            ],
+            "section": "B"
+        },
+        "B.17": {
+            "label": "learning rate",
+            "content": "A floating-point number that tells the gradient descent\nalgorithm how strongly to adjust weights and biases on each\niteration. For example, a learning rate of 0.3 would\nadjust weights and biases three times more powerfully than a learning rate\nof 0.1. Learning rate is a key hyperparameter. If you set\nthe learning rate too low, training will take too long. If\nyou set the learning rate too high, gradient descent often has trouble\nreaching convergence. See Linear regression:\nHyperparameters\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.9",
+                "B.22",
+                "B.10",
+                "A.9",
+                "B.3",
+                "A.15"
+            ],
+            "section": "B"
+        },
+        "B.18": {
+            "label": "loss curve",
+            "content": "A plot of loss as a function of the number of training\niterations. The following plot shows a typical loss\ncurve: Loss curves can help you determine when your model is\nconverging or overfitting. Loss curves can plot all of the following types of loss: training loss validation loss test loss See also generalization curve. See Overfitting: Interpreting loss curves\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.17",
+                "A.18",
+                "B.12",
+                "B.14",
+                "B.18",
+                "B.23",
+                "B.24",
+                "B.28",
+                "C.6",
+                "C.8",
+                "B.10",
+                "B.3",
+                "B.19",
+                "B.24",
+                "B.28",
+                "B.23",
+                "B.8"
+            ],
+            "section": "B"
+        },
+        "B.19": {
+            "label": "overfitting",
+            "content": "Creating a model that matches the\ntraining data so closely that the model fails to\nmake correct predictions on new data. Regularization can reduce overfitting.\nTraining on a large and diverse training set can also reduce overfitting. See Overfitting\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21"
+            ],
+            "section": "B"
+        },
+        "B.20": {
+            "label": "regularization",
+            "content": "Any mechanism that reduces overfitting.\nPopular types of regularization include: L1 regularization L2 regularization dropout regularization early stopping (this is not a formal\nregularization method, but can effectively limit overfitting) Regularization can also be defined as the penalty on a model's complexity. See Overfitting: Model complexity\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.19",
+                "B.13",
+                "B.15",
+                "B.4"
+            ],
+            "section": "B"
+        },
+        "B.21": {
+            "label": "regularization rate",
+            "content": "A number that specifies the relative importance of\nregularization during training. Raising the\nregularization rate reduces overfitting but may\nreduce the model's predictive power. Conversely, reducing or omitting\nthe regularization rate increases overfitting. See Overfitting: L2\nregularization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21",
+                "B.19"
+            ],
+            "section": "B"
+        },
+        "B.22": {
+            "label": "stochastic gradient descent",
+            "content": "A gradient descent algorithm in which the\nbatch size is one. In other words, SGD trains on\na single example chosen uniformly at\nrandom from a training set. See Linear regression: Hyperparameters\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "B.9",
+                "B.22",
+                "E.2",
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.15",
+                "A.6",
+                "E.6"
+            ],
+            "section": "B"
+        },
+        "B.23": {
+            "label": "test loss",
+            "content": "A metric representing a model's loss against\nthe test set. When building a model, you\ntypically try to minimize test loss. That's because a low test loss is a\nstronger quality signal than a low training loss or\nlow validation loss. A large gap between test loss and training loss or validation loss sometimes\nsuggests that you need to increase the\nregularization rate.",
+            "status": "",
+            "prerequisites": [
+                "A.17",
+                "A.18",
+                "B.12",
+                "B.14",
+                "B.18",
+                "B.23",
+                "B.24",
+                "B.28",
+                "C.6",
+                "C.8",
+                "A.6",
+                "E.6",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "B.24",
+                "B.28",
+                "B.21"
+            ],
+            "section": "B"
+        },
+        "B.24": {
+            "label": "training loss",
+            "content": "A metric representing a model's loss during a\nparticular training iteration. For example, suppose the loss function\nis Mean Squared Error. Perhaps the training loss (the Mean\nSquared Error) for the 10th iteration is 2.2, and the training loss for\nthe 100th iteration is 1.9. A loss curve plots training loss versus the number of\niterations. A loss curve provides the following hints about training: A downward slope implies that the model is improving. An upward slope implies that the model is getting worse. A flat slope implies that the model has reached\nconvergence. For example, the following somewhat idealized loss curve\nshows: A steep downward slope during the initial iterations, which implies\nrapid model improvement. A gradually flattening (but still downward) slope until close to the end\nof training, which implies continued model improvement at a somewhat\nslower pace then during the initial iterations. A flat slope towards the end of training, which suggests convergence. Although training loss is important, see also\ngeneralization.",
+            "status": "",
+            "prerequisites": [
+                "A.17",
+                "A.18",
+                "B.12",
+                "B.14",
+                "B.18",
+                "B.23",
+                "B.24",
+                "B.28",
+                "C.6",
+                "C.8",
+                "B.18",
+                "B.3",
+                "B.7",
+                "B.8"
+            ],
+            "section": "B"
+        },
+        "B.25": {
+            "label": "training-serving skew",
+            "content": "The difference between a model's performance during\ntraining and that same model's performance during\nserving.",
+            "status": "",
+            "prerequisites": [
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25"
+            ],
+            "section": "B"
+        },
+        "B.26": {
+            "label": "underfitting",
+            "content": "Producing a model with poor predictive ability because the model\nhasn't fully captured the complexity of the training data. Many problems\ncan cause underfitting, including: Training on the wrong set of features. Training for too few epochs or at too low\na learning rate. Training with too high a regularization rate. Providing too few hidden layers in a\ndeep neural network. See Overfitting\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "B.5",
+                "B.17",
+                "B.21",
+                "D.8",
+                "B.19"
+            ],
+            "section": "B"
+        },
+        "B.27": {
+            "label": "validation",
+            "content": "The initial evaluation of a model's quality.\nValidation checks the quality of a model's predictions against the\nvalidation set. Because the validation set differs from the training set,\nvalidation helps guard against overfitting. You might think of evaluating the model against the validation set as the\nfirst round of testing and evaluating the model against the\ntest set as the second round of testing.",
+            "status": "",
+            "prerequisites": [
+                "A.36",
+                "A.34",
+                "B.19"
+            ],
+            "section": "B"
+        },
+        "B.28": {
+            "label": "validation loss",
+            "content": "A metric representing a model's loss on\nthe validation set during a particular\niteration of training. See also generalization curve.",
+            "status": "",
+            "prerequisites": [
+                "A.17",
+                "A.18",
+                "B.12",
+                "B.14",
+                "B.18",
+                "B.23",
+                "B.24",
+                "B.28",
+                "C.6",
+                "C.8",
+                "A.36",
+                "B.10",
+                "B.8"
+            ],
+            "section": "B"
+        },
+        "B.29": {
+            "label": "weighted sum",
+            "content": "The sum of all the relevant input values multiplied by their corresponding\nweights. For example, suppose the relevant inputs consist of the following: The weighted sum is therefore: A weighted sum is the input argument to an\nactivation function.",
+            "status": "",
+            "prerequisites": [
+                "D.1",
+                "D.12"
+            ],
+            "section": "B"
+        },
+        "C.1": {
+            "label": "accuracy",
+            "content": "The number of correct classification predictions divided\nby the total number of predictions. That is: For example, a model that made 40 correct predictions and 10 incorrect\npredictions would have an accuracy of: Binary classification provides specific names\nfor the different categories of correct predictions and\nincorrect predictions. So, the accuracy formula for binary classification\nis as follows: where: TP is the number of true positives (correct predictions). TN is the number of true negatives (correct predictions). FP is the number of false positives (incorrect predictions). FN is the number of false negatives (incorrect predictions). Compare and contrast accuracy with\nprecision and\nrecall. See Classification: Accuracy, recall, precision and related\nmetrics\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.2",
+                "C.10",
+                "C.11",
+                "C.9",
+                "C.4",
+                "C.5",
+                "C.3",
+                "C.11",
+                "C.5",
+                "A.5"
+            ],
+            "section": "C"
+        },
+        "C.2": {
+            "label": "auc",
+            "content": "A number between 0.0 and 1.0 representing a\nbinary classification model's\nability to separate positive classes from\nnegative classes.\nThe closer the AUC is to 1.0, the better the model's ability to separate\nclasses from each other. For example, the following illustration shows a classifier model\nthat separates positive classes (green ovals) from negative classes\n(purple rectangles) perfectly. This unrealistically perfect model has\nan AUC of 1.0: Conversely, the following illustration shows the results for a classifier\nmodel that generated random results. This model has an AUC of 0.5: Yes, the preceding model has an AUC of 0.5, not 0.0. Most models are somewhere between the two extremes. For instance, the\nfollowing model separates positives from negatives somewhat, and therefore\nhas an AUC somewhere between 0.5 and 1.0: AUC ignores any value you set for\nclassification threshold. Instead, AUC\nconsiders all possible classification thresholds. See Classification: ROC and\nAUC\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.2",
+                "E.24",
+                "E.18",
+                "A.4",
+                "C.7"
+            ],
+            "section": "C"
+        },
+        "C.3": {
+            "label": "false negative",
+            "content": "An example in which the model mistakenly predicts the\nnegative class. For example, the model\npredicts that a particular email message is not spam\n(the negative class), but that email message actually is spam.",
+            "status": "",
+            "prerequisites": [
+                "E.18",
+                "A.5",
+                "A.2"
+            ],
+            "section": "C"
+        },
+        "C.4": {
+            "label": "false positive",
+            "content": "An example in which the model mistakenly predicts the\npositive class. For example, the model predicts\nthat a particular email message is spam (the positive class), but that\nemail message is actually not spam. See Thresholds and the confusion\nmatrix\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.24",
+                "A.4",
+                "A.5"
+            ],
+            "section": "C"
+        },
+        "C.5": {
+            "label": "false positive rate",
+            "content": "The proportion of actual negative examples for which the model mistakenly\npredicted the positive class. The following formula calculates the false\npositive rate: The false positive rate is the x-axis in an ROC curve. See Classification: ROC and\nAUC\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "C.7",
+                "C.11"
+            ],
+            "section": "C"
+        },
+        "C.6": {
+            "label": "log loss",
+            "content": "The loss function used in binary\nlogistic regression. See Logistic regression: Loss and regularization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.18",
+                "A.16",
+                "B.11",
+                "B.13",
+                "B.15",
+                "B.20",
+                "B.21"
+            ],
+            "section": "C"
+        },
+        "C.7": {
+            "label": "roc curve",
+            "content": "A graph of true positive rate versus\nfalse positive rate for different\nclassification thresholds in binary\nclassification. The shape of an ROC curve suggests a binary classification model's ability\nto separate positive classes from negative classes. Suppose, for example,\nthat a binary classification model perfectly separates all the negative\nclasses from all the positive classes: The ROC curve for the preceding model looks as follows: In contrast, the following illustration graphs the raw logistic regression\nvalues for a terrible model that can't separate negative classes from\npositive classes at all: The ROC curve for this model looks as follows: Meanwhile, back in the real world, most binary classification models separate\npositive and negative classes to some degree, but usually not perfectly. So,\na typical ROC curve falls somewhere between the two extremes: The point on an ROC curve closest to (0.0,1.0) theoretically identifies the\nideal classification threshold. However, several other real-world issues\ninfluence the selection of the ideal classification threshold. For example,\nperhaps false negatives cause far more pain than false positives. A numerical metric called AUC summarizes the ROC curve into\na single floating-point value.",
+            "status": "",
+            "prerequisites": [
+                "C.11",
+                "C.5",
+                "A.4",
+                "C.2"
+            ],
+            "section": "C"
+        },
+        "C.8": {
+            "label": "squared loss",
+            "content": "Synonym for L2 loss.",
+            "status": "",
+            "prerequisites": [
+                "B.14"
+            ],
+            "section": "C"
+        },
+        "C.9": {
+            "label": "true negative",
+            "content": "An example in which the model correctly predicts the\nnegative class. For example, the model infers that\na particular email message is not spam, and that email message really is\nnot spam.",
+            "status": "",
+            "prerequisites": [
+                "E.18",
+                "A.5"
+            ],
+            "section": "C"
+        },
+        "C.10": {
+            "label": "true positive",
+            "content": "An example in which the model correctly predicts the\npositive class. For example, the model infers that\na particular email message is spam, and that email message really is spam.",
+            "status": "",
+            "prerequisites": [
+                "E.24",
+                "A.5"
+            ],
+            "section": "C"
+        },
+        "C.11": {
+            "label": "true positive rate",
+            "content": "Synonym for recall. That is: True positive rate is the y-axis in an ROC curve.",
+            "status": "",
+            "prerequisites": [
+                "C.7",
+                "A.4"
+            ],
+            "section": "C"
+        },
+        "D.1": {
+            "label": "activation function",
+            "content": "A function that enables neural networks to learn\nnonlinear (complex) relationships between features\nand the label. Popular activation functions include: ReLU Sigmoid The plots of activation functions are never single straight lines.\nFor example, the plot of the ReLU activation function consists of\ntwo straight lines: A plot of the sigmoid activation function looks as follows: See Neural networks: Activation\nfunctions\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "D.11",
+                "A.22",
+                "D.15",
+                "D.16",
+                "B.29"
+            ],
+            "section": "D"
+        },
+        "D.2": {
+            "label": "bias",
+            "content": "An intercept or offset from an origin. Bias is a parameter in\nmachine learning models, which is symbolized by either of the\nfollowing: b w0 For example, bias is the b in the following formula: In a simple two-dimensional line, bias just means \"y-intercept.\"\nFor example, the bias of the line in the following illustration is 2. Bias exists because not all models start from the origin (0,0). For example,\nsuppose an amusement park costs 2 Euros to enter and an additional\n0.5 Euro for every hour a customer stays. Therefore, a model mapping the\ntotal cost has a bias of 2 because the lowest cost is 2 Euros. Bias is not to be confused with bias in ethics and fairness\nor prediction bias. See Linear Regression\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.15",
+                "B.1",
+                "B.9",
+                "B.22",
+                "B.29",
+                "D.19"
+            ],
+            "section": "D"
+        },
+        "D.3": {
+            "label": "deep model",
+            "content": "A neural network containing more than one\nhidden layer. A deep model is also called a deep neural network. Contrast with wide model.",
+            "status": "",
+            "prerequisites": [
+                "D.11",
+                "D.8",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "B.1",
+                "D.1"
+            ],
+            "section": "D"
+        },
+        "D.4": {
+            "label": "dense feature",
+            "content": "A feature in which most or all values are nonzero, typically\na Tensor of floating-point values. For example, the following\n10-element Tensor is dense because 9 of its values are nonzero: Contrast with sparse feature.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "D.18",
+                "E.20"
+            ],
+            "section": "D"
+        },
+        "D.5": {
+            "label": "depth",
+            "content": "The sum of the following in a neural network: the number of hidden layers the number of output layers, which is typically 1 the number of any embedding layers For example, a neural network with five hidden layers and one output layer\nhas a depth of 6. Notice that the input layer doesn't\ninfluence depth.",
+            "status": "",
+            "prerequisites": [
+                "D.11",
+                "D.8",
+                "D.14",
+                "D.6",
+                "D.9"
+            ],
+            "section": "D"
+        },
+        "D.6": {
+            "label": "embedding layer",
+            "content": "A special hidden layer that trains on a\nhigh-dimensional categorical feature to\ngradually learn a lower dimension embedding vector. An\nembedding layer enables a neural network to train far more\nefficiently than training just on the high-dimensional categorical feature. For example, Earth currently supports about 73,000 tree species. Suppose\ntree species is a feature in your model, so your model's\ninput layer includes a one-hot vector 73,000\nelements long.\nFor example, perhaps baobab would be represented something like this: A 73,000-element array is very long. If you don't add an embedding layer\nto the model, training is going to be very time consuming due to\nmultiplying 72,999 zeros. Perhaps you pick the embedding layer to consist\nof 12 dimensions. Consequently, the embedding layer will gradually learn\na new embedding vector for each tree species. In certain situations, hashing is a reasonable alternative\nto an embedding layer. See Embeddings\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "D.8",
+                "E.4",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.21",
+                "D.3"
+            ],
+            "section": "D"
+        },
+        "D.7": {
+            "label": "feature vector",
+            "content": "The array of feature values comprising an\nexample. The feature vector is input during\ntraining and during inference.\nFor example, the feature vector for a model with two discrete features\nmight be: Each example supplies different values for the feature vector, so the\nfeature vector for the next example could be something like: Feature engineering determines how to represent\nfeatures in the feature vector. For example, a binary categorical feature with\nfive possible values might be represented with\none-hot encoding. In this case, the portion of the\nfeature vector for a particular example would consist of four zeroes and\na single 1.0 in the third position, as follows: As another example, suppose your model consists of three features: a binary categorical feature with five possible values represented with\none-hot encoding; for example: [0.0, 1.0, 0.0, 0.0, 0.0] another binary categorical feature with three possible values represented\nwith one-hot encoding; for example: [0.0, 0.0, 1.0] a floating-point feature; for example: 8.3. In this case, the feature vector for each example would be represented\nby nine values. Given the example values in the preceding list, the\nfeature vector would be: See Numerical data: How a model ingests data using feature\nvectors\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.10",
+                "E.14",
+                "E.30",
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.10",
+                "A.24",
+                "A.25",
+                "E.12",
+                "E.21",
+                "E.20"
+            ],
+            "section": "D"
+        },
+        "D.8": {
+            "label": "hidden layer",
+            "content": "A layer in a neural network between the\ninput layer (the features) and the\noutput layer (the prediction).\nEach hidden layer consists of one or more neurons.\nFor example, the following neural network contains two hidden layers,\nthe first with three neurons and the second with two neurons: A deep neural network contains more than one\nhidden layer. For example, the preceding illustration is a deep neural\nnetwork because the model contains two hidden layers.",
+            "status": "",
+            "prerequisites": [
+                "D.11",
+                "D.9",
+                "D.14",
+                "D.12",
+                "D.3",
+                "B.1"
+            ],
+            "section": "D"
+        },
+        "D.9": {
+            "label": "input layer",
+            "content": "The layer of a neural network that\nholds the feature vector. That is, the input layer\nprovides examples for training or\ninference. For example, the input layer in the following\nneural network consists of two features:",
+            "status": "",
+            "prerequisites": [
+                "D.6",
+                "D.8",
+                "D.9",
+                "D.10",
+                "D.14",
+                "D.11",
+                "D.7",
+                "E.10",
+                "E.14",
+                "E.30",
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.10",
+                "A.24",
+                "A.25",
+                "D.3"
+            ],
+            "section": "D"
+        },
+        "D.20": {
+            "label": "large language model",
+            "content": "",
+            "status": "",
+            "prerequisites": [
+                "A.29"
+            ],
+            "section": "D"
+        },
+        "D.10": {
+            "label": "layer",
+            "content": "A set of neurons in a\nneural network. Three common types of layers\nare as follows: The input layer, which provides values for all the\nfeatures. One or more hidden layers, which find\nnonlinear relationships between the features and the label. The output layer, which provides the prediction. For example, the following illustration shows a neural network with\none input layer, two hidden layers, and one output layer: In TensorFlow, layers are also Python functions that take\nTensors and configuration options as input and\nproduce other tensors as output.",
+            "status": "",
+            "prerequisites": [
+                "D.12",
+                "D.11",
+                "D.9",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "D.8",
+                "D.14",
+                "D.6"
+            ],
+            "section": "D"
+        },
+        "D.11": {
+            "label": "neural network",
+            "content": "A model containing at least one\nhidden layer.\nA deep neural network is a type of neural network\ncontaining more than one hidden layer. For example, the following diagram\nshows a deep neural network containing two hidden layers. Each neuron in a neural network connects to all of the nodes in the next layer.\nFor example, in the preceding diagram, notice that each of the three neurons\nin the first hidden layer separately connect to both of the two neurons in the\nsecond hidden layer. Neural networks implemented on computers are sometimes called\nartificial neural networks to differentiate them from\nneural networks found in brains and other nervous systems. Some neural networks can mimic extremely complex nonlinear relationships\nbetween different features and the label. See also convolutional neural network and\nrecurrent neural network. See Neural networks\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "D.8",
+                "D.3",
+                "B.1",
+                "D.1"
+            ],
+            "section": "D"
+        },
+        "D.12": {
+            "label": "neuron",
+            "content": "In machine learning, a distinct unit within a hidden layer\nof a neural network. Each neuron performs the following\ntwo-step action: A neuron in the first hidden layer accepts inputs from the feature values\nin the input layer. A neuron in any hidden layer beyond\nthe first accepts inputs from the neurons in the preceding hidden layer.\nFor example, a neuron in the second hidden layer accepts inputs from the\nneurons in the first hidden layer. The following illustration highlights two neurons and their\ninputs. A neuron in a neural network mimics the behavior of neurons in brains and\nother parts of nervous systems.",
+            "status": "",
+            "prerequisites": [
+                "D.8",
+                "D.11",
+                "D.9",
+                "D.1"
+            ],
+            "section": "D"
+        },
+        "D.13": {
+            "label": "node",
+            "content": "A neuron in a hidden layer. See Neural Networks\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "D.12",
+                "D.8",
+                "D.11",
+                "D.6",
+                "D.8",
+                "D.9",
+                "D.10",
+                "D.14"
+            ],
+            "section": "D"
+        },
+        "D.14": {
+            "label": "output layer",
+            "content": "The \"final\" layer of a neural network. The output layer contains the prediction. The following illustration shows a small deep neural network with an input\nlayer, two hidden layers, and an output layer:",
+            "status": "",
+            "prerequisites": [
+                "D.11",
+                "D.3",
+                "D.6",
+                "D.8",
+                "D.9",
+                "D.10",
+                "D.14",
+                "D.12"
+            ],
+            "section": "D"
+        },
+        "D.15": {
+            "label": "relu",
+            "content": "An activation function with the following behavior: If input is negative or zero, then the output is 0. If input is positive, then the output is equal to the input. For example: If the input is -3, then the output is 0. If the input is +3, then the output is 3.0. Here is a plot of ReLU: ReLU is a very popular activation function. Despite its simple behavior,\nReLU still enables a neural network to learn nonlinear\nrelationships between features and the label.",
+            "status": "",
+            "prerequisites": [
+                "D.1",
+                "A.22",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.12",
+                "E.14",
+                "E.30"
+            ],
+            "section": "D"
+        },
+        "D.16": {
+            "label": "sigmoid function",
+            "content": "A mathematical function that \"squishes\" an input value into a constrained range,\ntypically 0 to 1 or -1 to +1. That is, you can pass any number (two, a million,\nnegative billion, whatever) to a sigmoid and the output will still be in the\nconstrained range.\nA plot of the sigmoid activation function looks as follows: The sigmoid function has several uses in machine learning, including: Converting the raw output of a\nlogistic regression\nor multinomial regression model to\na probability. Acting as an activation function in some\nneural networks.",
+            "status": "",
+            "prerequisites": [
+                "A.16",
+                "D.1"
+            ],
+            "section": "D"
+        },
+        "D.17": {
+            "label": "softmax",
+            "content": "A function that determines probabilities for each possible class in a\nmulti-class classification model. The probabilities add up\nto exactly 1.0. For example, the following table shows how softmax distributes\nvarious probabilities: Softmax is also called full softmax. Contrast with candidate sampling. See Neural networks: Multi-class classification\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.21",
+                "D.11"
+            ],
+            "section": "D"
+        },
+        "D.18": {
+            "label": "sparse feature",
+            "content": "A feature whose values are predominately zero or empty.\nFor example, a feature containing a single 1 value and a million 0 values is\nsparse. In contrast, a dense feature has values that\nare predominantly not zero or empty. In machine learning, a surprising number of features are sparse features.\nCategorical features are usually sparse features.\nFor example, of the 300 possible tree species in a forest, a single example\nmight identify just a maple tree. Or, of the millions\nof possible videos in a video library, a single example might identify\njust \"Casablanca.\" In a model, you typically represent sparse features with\none-hot encoding. If the one-hot encoding is big,\nyou might put an embedding layer on top of the\none-hot encoding for greater efficiency.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "D.4",
+                "E.21",
+                "D.6"
+            ],
+            "section": "D"
+        },
+        "D.19": {
+            "label": "weight",
+            "content": "A value that a model multiplies by another value.\nTraining is the process of determining a model's ideal weights;\ninference is the process of using those learned weights to\nmake predictions. See Linear regression\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.33",
+                "A.34",
+                "B.24",
+                "B.25",
+                "A.10",
+                "A.24",
+                "A.25",
+                "A.15",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20"
+            ],
+            "section": "D"
+        },
+        "E.1": {
+            "label": "batch",
+            "content": "The set of examples used in one training\niteration.\nThe batch size determines the number of examples in a\nbatch. See epoch for an explanation of how a batch relates to\nan epoch. See Linear regression:\nHyperparameters\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.10",
+                "E.14",
+                "E.30",
+                "B.10",
+                "E.2",
+                "B.5",
+                "A.15",
+                "A.9",
+                "E.16",
+                "B.22"
+            ],
+            "section": "E"
+        },
+        "E.2": {
+            "label": "batch size",
+            "content": "The number of examples in a batch.\nFor instance, if the batch size is 100, then the model processes\n100 examples per iteration. The following are popular batch size strategies: Stochastic Gradient Descent (SGD), in which the batch size is 1. Full batch, in which the batch size is the number of examples in the entire\ntraining set. For instance, if the training set\ncontains a million examples, then the batch size would be a million\nexamples. Full batch is usually an inefficient strategy. mini-batch in which the batch size is usually between\n10 and 1000. Mini-batch is usually the most efficient strategy. See the following for more information: Production ML systems: Static versus dynamic\ninference\nin Machine Learning Crash Course. Deep Learning Tuning\nPlaybook.",
+            "status": "",
+            "prerequisites": [
+                "E.10",
+                "E.14",
+                "E.30",
+                "E.1",
+                "E.2",
+                "E.16",
+                "B.10",
+                "B.22",
+                "A.34",
+                "E.16",
+                "D.3",
+                "A.9"
+            ],
+            "section": "E"
+        },
+        "E.3": {
+            "label": "bucketing",
+            "content": "Converting a single feature into multiple binary features\ncalled buckets or bins,\ntypically based on a value range. The chopped feature is typically a\ncontinuous feature. For example, instead of representing temperature as a single\ncontinuous floating-point feature, you could chop ranges of temperatures\ninto discrete buckets, such as: <= 10 degrees Celsius would be the \"cold\" bucket. 11 - 24 degrees Celsius would be the \"temperate\" bucket. >= 25 degrees Celsius would be the \"warm\" bucket. The model will treat every value in the same bucket identically. For\nexample, the values 13 and 22 are both in the temperate bucket, so the\nmodel treats the two values identically. See Numerical data:\nBinning\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.7",
+                "E.11",
+                "E.12"
+            ],
+            "section": "E"
+        },
+        "E.4": {
+            "label": "categorical data",
+            "content": "Features having a specific set of possible values. For example,\nconsider a categorical feature named traffic-light-state, which can only\nhave one of the following three possible values: red yellow green By representing traffic-light-state as a categorical feature,\na model can learn the\ndiffering impacts of red, green, and yellow on driver behavior. Categorical features are sometimes called\ndiscrete features. Contrast with numerical data. See Working with categorical\ndata\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.9",
+                "E.20",
+                "E.21",
+                "D.18"
+            ],
+            "section": "E"
+        },
+        "E.5": {
+            "label": "class",
+            "content": "A category that a label can belong to.\nFor example: In a binary classification model that detects\nspam, the two classes might be spam and not spam. In a multi-class classification model\nthat identifies dog breeds, the classes might be poodle, beagle, pug,\nand so on. A classification model predicts a class.\nIn contrast, a regression model predicts a number\nrather than a class. See Classification\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.2",
+                "A.21",
+                "A.3",
+                "A.28"
+            ],
+            "section": "E"
+        },
+        "E.6": {
+            "label": "class-imbalanced dataset",
+            "content": "A dataset for a classification problem in which the total number\nof labels of each class differs significantly.\nFor example, consider a binary classification dataset whose two labels\nare divided as follows: 1,000,000 negative labels 10 positive labels The ratio of negative to positive labels is 100,000 to 1, so this\nis a class-imbalanced dataset. In contrast, the following dataset is not class-imbalanced because the\nratio of negative labels to positive labels is relatively close to 1: 517 negative labels 483 positive labels Multi-class datasets can also be class-imbalanced. For example, the following\nmulti-class classification dataset is also class-imbalanced because one label\nhas far more examples than the other two: 1,000,000 labels with class \"green\" 200 labels with class \"purple\" 350 labels with class \"orange\" See also entropy, majority class,\nand minority class.",
+            "status": "",
+            "prerequisites": [
+                "A.12",
+                "E.14",
+                "E.30",
+                "E.15",
+                "E.17",
+                "A.2"
+            ],
+            "section": "E"
+        },
+        "E.7": {
+            "label": "continuous feature",
+            "content": "A floating-point feature with an infinite range of possible\nvalues, such as temperature or weight. Contrast with discrete feature.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.9",
+                "E.20",
+                "E.12",
+                "E.3"
+            ],
+            "section": "E"
+        },
+        "E.8": {
+            "label": "dataframe",
+            "content": "A popular pandas data type for representing\ndatasets in memory. A DataFrame is analogous to a table or a spreadsheet. Each column of\na DataFrame has a name (a header), and each row is identified by a\nunique number. Each column in a DataFrame is structured like a 2D array, except that\neach column can be assigned its own data type. See also the official\npandas.DataFrame reference\npage.",
+            "status": "",
+            "prerequisites": [
+                "E.23",
+                "A.6",
+                "E.6"
+            ],
+            "section": "E"
+        },
+        "E.9": {
+            "label": "discrete feature",
+            "content": "A feature with a finite set of possible values. For example,\na feature whose values may only be animal, vegetable, or mineral is a\ndiscrete (or categorical) feature. Contrast with continuous feature.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.7",
+                "E.4"
+            ],
+            "section": "E"
+        },
+        "E.10": {
+            "label": "example",
+            "content": "The values of one row of features and possibly\na label. Examples in\nsupervised learning fall into two\ngeneral categories: A labeled example consists of one or more features\nand a label. Labeled examples are used during training. An unlabeled example consists of one or\nmore features but no label. Unlabeled examples are used during inference. For instance, suppose you are training a model to determine the influence\nof weather conditions on student test scores. Here are three labeled examples: Here are three unlabeled examples: The row of a dataset is typically the raw source for an example.\nThat is, an example typically consists of a subset of the columns in\nthe dataset. Furthermore, the features in an example can also include\nsynthetic features, such as\nfeature crosses. See Supervised Learning in\nthe Introduction to Machine Learning course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.32",
+                "A.35",
+                "E.14",
+                "E.30",
+                "E.30",
+                "A.6",
+                "E.6",
+                "E.29",
+                "E.11"
+            ],
+            "section": "E"
+        },
+        "E.11": {
+            "label": "feature cross",
+            "content": "A synthetic feature formed by \"crossing\"\ncategorical or bucketed features. For example, consider a \"mood forecasting\" model that represents\ntemperature in one of the following four buckets: freezing chilly temperate warm And represents wind speed in one of the following three buckets: still light windy Without feature crosses, the linear model trains independently on each of the\npreceding seven various buckets. So, the model trains on, for example,\nfreezing independently of the training on, for example,\nwindy. Alternatively, you could create a feature cross of temperature and\nwind speed. This synthetic feature would have the following 12 possible\nvalues: freezing-still freezing-light freezing-windy chilly-still chilly-light chilly-windy temperate-still temperate-light temperate-windy warm-still warm-light warm-windy Thanks to feature crosses, the model can learn mood differences\nbetween a freezing-windy day and a freezing-still day. If you create a synthetic feature from two features that each have a lot of\ndifferent buckets, the resulting feature cross will have a huge number\nof possible combinations. For example, if one feature has 1,000 buckets and\nthe other feature has 2,000 buckets, the resulting feature cross has 2,000,000\nbuckets. Formally, a cross is a\nCartesian product. Feature crosses are mostly used with linear models and are rarely used\nwith neural networks. See Categorical data: Feature\ncrosses\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.29",
+                "E.4",
+                "E.3",
+                "E.12"
+            ],
+            "section": "E"
+        },
+        "E.12": {
+            "label": "feature engineering",
+            "content": "A process that involves the following steps: For example, you might determine that temperature might be a useful\nfeature. Then, you might experiment with bucketing\nto optimize what the model can learn from different temperature ranges. Feature engineering is sometimes called\nfeature extraction or\nfeaturization. See Numerical data: How a model ingests data using feature\nvectors\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.3",
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.20",
+                "E.11",
+                "E.19",
+                "E.31"
+            ],
+            "section": "E"
+        },
+        "E.13": {
+            "label": "feature set",
+            "content": "The group of features your machine learning\nmodel trains on.\nFor example, a simple feature set for a model that predicts housing prices\nmight consist of postal code, property size, and property condition.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.3",
+                "A.7",
+                "A.14",
+                "A.20",
+                "A.28",
+                "A.30",
+                "D.3",
+                "D.20",
+                "D.7",
+                "E.10",
+                "E.14",
+                "E.30"
+            ],
+            "section": "E"
+        },
+        "E.14": {
+            "label": "labeled example",
+            "content": "An example that contains one or more features and a\nlabel. For example, the following table shows three\nlabeled examples from a house valuation model, each with three features\nand one label: In supervised machine learning,\nmodels train on labeled examples and make predictions on\nunlabeled examples. Contrast labeled example with unlabeled examples. See Supervised Learning\nin Introduction to Machine Learning for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.32",
+                "A.35",
+                "E.30",
+                "A.6",
+                "E.6"
+            ],
+            "section": "E"
+        },
+        "E.15": {
+            "label": "majority class",
+            "content": "The more common label in a\nclass-imbalanced dataset. For example,\ngiven a dataset containing 99% negative labels and 1% positive labels, the\nnegative labels are the majority class. Contrast with minority class. See Datasets: Imbalanced datasets\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.6",
+                "E.17",
+                "A.6",
+                "E.6",
+                "A.3"
+            ],
+            "section": "E"
+        },
+        "E.16": {
+            "label": "mini-batch",
+            "content": "A small, randomly selected subset of a batch processed in one\niteration.\nThe batch size of a mini-batch is usually\nbetween 10 and 1,000 examples. For example, suppose the entire training set (the full batch)\nconsists of 1,000 examples. Further suppose that you set the\nbatch size of each mini-batch to 20. Therefore, each\niteration determines the loss on a random 20 of the 1,000 examples and then\nadjusts the weights and biases accordingly. It is much more efficient to calculate the loss on a mini-batch than the\nloss on all the examples in the full batch. See Linear regression:\nHyperparameters\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.1",
+                "E.2",
+                "E.16",
+                "B.10",
+                "E.2",
+                "B.29",
+                "D.19",
+                "D.2",
+                "B.22"
+            ],
+            "section": "E"
+        },
+        "E.17": {
+            "label": "minority class",
+            "content": "The less common label in a\nclass-imbalanced dataset. For example,\ngiven a dataset containing 99% negative labels and 1% positive labels, the\npositive labels are the minority class. Contrast with majority class. See Datasets: Imbalanced datasets\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.6",
+                "E.15",
+                "A.6",
+                "E.6",
+                "A.3"
+            ],
+            "section": "E"
+        },
+        "E.18": {
+            "label": "negative class",
+            "content": "In binary classification, one class is\ntermed positive and the other is termed negative. The positive class is\nthe thing or event that the model is testing for and the negative class is the\nother possibility. For example: The negative class in a medical test might be \"not tumor.\" The negative class in an email classifier might be \"not spam.\" Contrast with positive class.",
+            "status": "",
+            "prerequisites": [
+                "A.2",
+                "E.24",
+                "A.5"
+            ],
+            "section": "E"
+        },
+        "E.19": {
+            "label": "normalization",
+            "content": "Broadly speaking, the process of converting a variable's actual range\nof values into a standard range of values, such as: -1 to +1 0 to 1 Z-scores (roughly, -3 to +3) For example, suppose the actual range of values of a certain feature is\n800 to 2,400. As part of feature engineering,\nyou could normalize the actual values down to a standard range, such\nas -1 to +1. Normalization is a common task in\nfeature engineering. Models usually train faster\n(and produce better predictions) when every numerical feature in the\nfeature vector has roughly the same range. See also Z-score normalization. See Numerical Data: Normalization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.12",
+                "D.7",
+                "E.31",
+                "E.20"
+            ],
+            "section": "E"
+        },
+        "E.20": {
+            "label": "numerical data",
+            "content": "Features represented as integers or real-valued numbers.\nFor example, a house valuation model would probably represent the size\nof a house (in square feet or square meters) as numerical data. Representing\na feature as numerical data indicates that the feature's values have\na mathematical relationship to the label.\nThat is, the number of square meters in a house probably has some\nmathematical relationship to the value of the house. Not all integer data should be represented as numerical data. For example,\npostal codes in some parts of the world are integers; however, integer postal\ncodes shouldn't be represented as numerical data in models. That's because a\npostal code of 20000 is not twice (or half) as potent as a postal code of\n10000. Furthermore, although different postal codes do correlate to different\nreal estate values, we can't assume that real estate values at postal code\n20000 are twice as valuable as real estate values at postal code 10000.\nPostal codes should be represented as categorical data\ninstead. Numerical features are sometimes called\ncontinuous features. See Working with numerical data\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.4",
+                "E.7",
+                "E.20"
+            ],
+            "section": "E"
+        },
+        "E.21": {
+            "label": "one-hot encoding",
+            "content": "Representing categorical data as a vector in which: One element is set to 1. All other elements are set to 0. One-hot encoding is commonly used to represent strings or identifiers that\nhave a finite set of possible values.\nFor example, suppose a certain categorical feature named\nScandinavia has five possible values: \"Denmark\" \"Sweden\" \"Norway\" \"Finland\" \"Iceland\" One-hot encoding could represent each of the five values as follows: Thanks to one-hot encoding, a model can learn different connections\nbased on each of the five countries. Representing a feature as numerical data is an\nalternative to one-hot encoding. Unfortunately, representing the\nScandinavian countries numerically is not a good choice. For example,\nconsider the following numeric representation: \"Denmark\" is 0 \"Sweden\" is 1 \"Norway\" is 2 \"Finland\" is 3 \"Iceland\" is 4 With numeric encoding, a model would interpret the raw numbers\nmathematically and would try to train on those numbers.\nHowever, Iceland isn't actually twice as much (or half as much) of\nsomething as Norway, so the model would come to some strange conclusions. See Categorical data: Vocabulary and one-hot\nencoding\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.20",
+                "E.4",
+                "D.6"
+            ],
+            "section": "E"
+        },
+        "E.22": {
+            "label": "one-vs-all",
+            "content": "Given a classification problem with N classes, a\nsolution consisting of N separate\nbinary classifiers\u2014one binary classifier for\neach possible outcome. For example, given a model that classifies examples\nas animal, vegetable, or mineral, a one-vs.-all solution would provide the\nfollowing three separate binary classifiers: animal versus not animal vegetable versus not vegetable mineral versus not mineral",
+            "status": "",
+            "prerequisites": [
+                "A.21"
+            ],
+            "section": "E"
+        },
+        "E.23": {
+            "label": "pandas",
+            "content": "A column-oriented data analysis API built on top of numpy.\nMany machine learning frameworks,\nincluding TensorFlow, support pandas data structures as inputs. See the\npandas documentation\nfor details.",
+            "status": "",
+            "prerequisites": [
+                "E.8",
+                "A.6",
+                "E.6"
+            ],
+            "section": "E"
+        },
+        "E.24": {
+            "label": "positive class",
+            "content": "The class you are testing for. For example, the positive class in a cancer model might be \"tumor.\"\nThe positive class in an email classifier might be \"spam.\" Contrast with negative class.",
+            "status": "",
+            "prerequisites": [
+                "E.18",
+                "A.2"
+            ],
+            "section": "E"
+        },
+        "E.25": {
+            "label": "post-processing",
+            "content": "Adjusting the output of a model after the model has been run.\nPost-processing can be used to enforce fairness constraints without\nmodifying models themselves. For example, one might apply post-processing to a binary classifier\nby setting a classification threshold such that\nequality of opportunity is maintained\nfor some attribute by checking that the true positive rate\nis the same for all values of that attribute.",
+            "status": "",
+            "prerequisites": [
+                "C.11"
+            ],
+            "section": "E"
+        },
+        "E.26": {
+            "label": "rater",
+            "content": "A human who provides labels for examples.\n\"Annotator\" is another name for rater. See Categorical data: Common issues\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.12",
+                "E.14",
+                "E.30",
+                "E.10",
+                "E.14",
+                "E.30",
+                "B.6"
+            ],
+            "section": "E"
+        },
+        "E.27": {
+            "label": "sparse representation",
+            "content": "Storing only the position(s) of nonzero elements in a sparse feature. For example, suppose a categorical feature named species identifies the 36\ntree species in a particular forest. Further assume that each\nexample identifies only a single species. You could use a one-hot vector to represent the tree species in each example.\nA one-hot vector would contain a single 1 (to represent\nthe particular tree species in that example) and 35 0s (to represent the\n35 tree species not in that example). So, the one-hot representation\nof maple might look something like the following: Alternatively, sparse representation would simply identify the position of the\nparticular species. If maple is at position 24, then the sparse representation\nof maple would simply be: Notice that the sparse representation is much more compact than the one-hot\nrepresentation. See Working with categorical data\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "E.10",
+                "E.14",
+                "E.30",
+                "E.4"
+            ],
+            "section": "E"
+        },
+        "E.28": {
+            "label": "sparse vector",
+            "content": "A vector whose values are mostly zeroes. See also sparse\nfeature and sparsity.",
+            "status": "",
+            "prerequisites": [
+                "D.18"
+            ],
+            "section": "E"
+        },
+        "E.29": {
+            "label": "synthetic feature",
+            "content": "A feature not present among the input features, but\nassembled from one or more of them. Methods for creating synthetic features\ninclude the following: Bucketing a continuous feature into range bins. Creating a feature cross. Multiplying (or dividing) one feature value by other feature value(s)\nor by itself. For example, if a and b are input features, then the\nfollowing are examples of synthetic features:\n\nab\na2 ab a2 Applying a transcendental function to a feature value. For example, if c\nis an input feature, then the following are examples of synthetic features:\n\nsin(c)\nln(c) sin(c) ln(c) Features created by normalizing or scaling\nalone are not considered synthetic features.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.3",
+                "E.11",
+                "E.19",
+                "E.31"
+            ],
+            "section": "E"
+        },
+        "E.30": {
+            "label": "unlabeled example",
+            "content": "An example that contains features but no label.\nFor example, the following table shows three unlabeled examples from a house\nvaluation model, each with three features but no house value: In supervised machine learning,\nmodels train on labeled examples and make predictions on\nunlabeled examples. In semi-supervised and\nunsupervised learning,\nunlabeled examples are used during training. Contrast unlabeled example with labeled example.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "A.12",
+                "E.14",
+                "E.30",
+                "A.32",
+                "A.35",
+                "E.30",
+                "E.14",
+                "E.30"
+            ],
+            "section": "E"
+        },
+        "E.31": {
+            "label": "z-score normalization",
+            "content": "A scaling technique that replaces a raw\nfeature value with a floating-point value representing\nthe number of standard deviations from that feature's mean.\nFor example, consider a feature whose mean is 800 and whose standard\ndeviation is 100. The following table shows how Z-score normalization\nwould map the raw value to its Z-score: The machine learning model then trains on the Z-scores\nfor that feature instead of on the raw values. See Numerical data: Normalization\nin Machine Learning Crash Course for more information.",
+            "status": "",
+            "prerequisites": [
+                "A.8",
+                "D.4",
+                "D.7",
+                "D.18",
+                "E.7",
+                "E.9",
+                "E.11",
+                "E.12",
+                "E.13",
+                "E.29",
+                "E.20",
+                "E.19",
+                "E.31"
+            ],
+            "section": "E"
+        }
+    }
+}

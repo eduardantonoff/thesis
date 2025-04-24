@@ -1,0 +1,293 @@
+/* ========== Layout ========== */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: Avenir, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  position: fixed;
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+  width: 30%;
+  background-color: #363D3F;
+  padding: 30px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  word-break: break-word;
+  flex-shrink: 0;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar li {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.sidebar.collapsed {
+  width: 50px;
+  padding: 15px 10px;
+}
+
+/* Sidebar toggle (chevron) */
+.sidebar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #363D3F;
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+  transform: rotate(180deg);
+}
+
+/* ========== Main Content ========== */
+.main-content {
+  width: 70%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.main-content.expanded {
+  width: calc(100% - 60px);
+}
+
+/* ========== Chat Container ========== */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Top bar with date/time */
+.top-bar {
+  height: 40px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* ========== Chat Box ========== */
+.chat-box {
+  flex: 1;
+  padding: 10px;
+  overflow-y: scroll;
+  -webkit-scrollbar-display: none; /* For older Safari/WebKit versions */
+}
+
+/* ========== Messages ========== */
+.message {
+  margin-bottom: 20px;
+  padding: 1px 16px;
+  border-radius: 12px;
+  max-width: 100%;
+  clear: both;
+  display: inline-block;
+  word-break: break-word;
+}
+
+.message.user {
+  border-radius: 20px;
+  max-width: 50%;
+  background-color: #363D3F;
+  color: white;
+  float: right;
+  align-self: flex-end;
+}
+
+.message.bot {
+  border-radius: 20px;
+  max-width: 100%;
+  background-color: #f5f5f5;
+  float: left;
+}
+
+.message.bot:hover {
+  background-color: #f5f5f58a;
+}
+
+/* Focused/pinned message styling (optional) */
+.focused-message {
+  margin-top: 0;
+}
+
+/* ========== Continue Button ========== */
+.continue-btn {
+  flex-grow: 1;
+  padding: 20px;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  border: 0.5px solid #afafaf;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #363D3F;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.continue-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.continue-btn:disabled {
+  background-color: #ffffff;
+  cursor: not-allowed;
+}
+
+/* ========== Input Area ========== */
+.input-area {
+  padding: 8px;
+  display: flex;
+}
+
+.input-area textarea,
+.input-area .continue-btn {
+  flex-grow: 1;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  border: 0.5px solid #afafaf;
+  border-radius: 20px;
+  resize: none;
+}
+
+.input-area textarea {
+  padding: 20px;
+}
+
+.input-area textarea:focus {
+  outline: 0.5px solid #363D3F;
+}
+
+/* ========== Loading Dots Animation (for bot "typing") ========== */
+.loading-indicator {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.loading-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #444;
+  border-radius: 50%;
+  margin: 0 4px;
+  animation: loading 1s infinite ease-in-out;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+ 
+/* ========== KaTeX (Math) Styling ========== */
+.message.bot .katex {
+  font-size: 18px;
+  color: #333;
+}
+
+.sidebar .katex {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* ========== User Profile (in sidebar) ========== */
+.sidebar-board {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* preserve line breaks */
+  word-wrap: break-word;
+  color: #ffffff;
+}
+
+/* For the "Learning Session Active" or "focus session" text in the top bar */
+.learning-session-active {
+  color: #363D3F;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: width 0.3s ease;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .sidebar.collapsed {
+    width: 60px;
+  }
+
+  .sidebar-toggle {
+    top: 10px;
+    right: 10px;
+    display: block;
+  }
+
+  .message.user {
+    max-width: 70%;
+  }
+
+  .message.bot {
+    max-width: 100%;
+  }
+
+  .continue-btn,
+  .input-area textarea {
+    font-size: 16px;
+  }
+}
