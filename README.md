@@ -75,6 +75,9 @@ The system's knowledge foundation is built from curated resources:
 This research was presented at:
 - **IEEE International Conference on Robotics, Intelligent Control and Artificial Intelligence** (China, 2024)
 
+View on [IEEE Xplore](https://ieeexplore.ieee.org/document/10911764).
+
+
 ## Future Development
 
 The methods and results from this research are being applied to develop `leias`, an advanced multi-agent educational assistant that expands upon the architecture presented here. As an active development project, new features and improvements are continuously being implemented.
