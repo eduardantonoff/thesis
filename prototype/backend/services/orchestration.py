@@ -17,8 +17,8 @@ from core.config import llm, checkpointer
 from schemas.state import AgentState
 from schemas.sub_one import PlanExecute, Plan, LearningObject, Conclusion, Act, LearningSession
 from schemas.sub_two import EvalExecute, Evaluations, EvalObject, Report, ActE, AssessmentSession
-from tools.memory import store_profile, retrieve_profile, delete_profile
-from tools.retreival import retrieve_sections, retrieve_concept, update_concept_status, get_prerequisites
+from tools.memory import store_memory, retrieve_memory, delete_memory
+from tools.retreival import retrieve_sections, retrieve_node, update_status, retrieve_prerequisites
 
 load_dotenv(dotenv_path='.env', override=True)
 
@@ -234,13 +234,13 @@ evaluationflow.add_conditional_edges("remap", should_end_eval, ["evaluation_obje
 assessmentapp = evaluationflow.compile()
 
 tools = [
-    store_profile, 
-    retrieve_profile, 
-    delete_profile, 
+    store_memory, 
+    retrieve_memory, 
+    delete_memory, 
     retrieve_sections, 
-    retrieve_concept, 
-    update_concept_status, 
-    get_prerequisites
+    retrieve_node, 
+    update_status, 
+    retrieve_prerequisites
 ]
  
 tool_node = ToolNode(tools)

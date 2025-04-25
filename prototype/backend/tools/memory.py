@@ -37,7 +37,7 @@ def _validate_profile_type(profile_type: str) -> None:
         )
 
 @tool
-def store_profile(content: str, profile_type: str, config=CONFIG, store=store) -> str:
+def store_memory(content: str, profile_type: str, config=CONFIG, store=store) -> str:
     """Stores a user profile attribute in the database.
     
     Args:
@@ -67,7 +67,7 @@ def store_profile(content: str, profile_type: str, config=CONFIG, store=store) -
     return f"Stored information: '{content}' | ID: {memory_id}"
 
 @tool
-def retrieve_profile(profile_type: str, config=CONFIG, store=store) -> List[Dict[str, str]]:
+def retrieve_memory(profile_type: str, config=CONFIG, store=store) -> List[Dict[str, str]]:
     """Retrieves user profile information of a specified type.
 
     Args:
@@ -91,7 +91,7 @@ def retrieve_profile(profile_type: str, config=CONFIG, store=store) -> List[Dict
     ]
 
 @tool
-def delete_profile(key: str, config=CONFIG, store=store) -> str:
+def delete_memory(key: str, config=CONFIG, store=store) -> str:
     """Deletes a specific user profile entry by its ID.
 
     Args:

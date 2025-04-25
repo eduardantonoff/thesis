@@ -74,7 +74,7 @@ def retrieve_sections(section_letter: str, data: dict = graph_data) -> Union[Lis
     return results
 
 @tool
-def retrieve_concept(concept_id: str, data: dict = graph_data) -> Union[Dict[str, Any], str, None]:
+def retrieve_node(concept_id: str, data: dict = graph_data) -> Union[Dict[str, Any], str, None]:
     """Retrieves a concept by its unique ID.
 
     Args:
@@ -96,7 +96,7 @@ def retrieve_concept(concept_id: str, data: dict = graph_data) -> Union[Dict[str
     return data["concepts"].get(concept_id)
 
 @tool
-def update_concept_status(concept_id: str, new_status: str, path: str = GRAPH_PATH) -> str:
+def update_status(concept_id: str, new_status: str, path: str = GRAPH_PATH) -> str:
     """Updates a concept's status in a JSON file and saves the changes.
 
     Args:
@@ -147,7 +147,7 @@ def update_concept_status(concept_id: str, new_status: str, path: str = GRAPH_PA
         return f"Error: Concept with ID '{concept_id}' not found."
     
 @tool
-def get_prerequisites(concept_id: str, path: str = GRAPH_PATH) -> str:
+def retrieve_prerequisites(concept_id: str, path: str = GRAPH_PATH) -> str:
     """Retrieves all prerequisites for a given concept ID, including their IDs and labels.
 
     Args:
