@@ -18,8 +18,8 @@ The system functions as an intelligent educational assistant with several core c
 
 The system's knowledge foundation is built from curated resources:
 
-- [**Google's Machine Learning Glossary**](https://developers.google.com/machine-learning/glossary): A comprehensive glossary covering a broad range of machine learning terms
 - [**Machine Learning Ontology**](https://doi.org/10.17605/OSF.IO/CHU5Q): An ontology representing machine learning knowledge, developed by Braga, Regateiro, and Dias
+- [**Machine Learning Glossary**](https://developers.google.com/machine-learning/glossary): A comprehensive glossary of machine learning terms, curated by Google
 - **Synthetic Data**: Automated pipeline generates structured JSON nodes (ID, title, prerequisites) which are then expert-curated for logical consistency
 
 ## Repository Structure
