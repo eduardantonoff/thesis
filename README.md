@@ -38,7 +38,7 @@ The system's knowledge foundation is built from curated resources:
 ```
 
 
-## System Architecture
+## System Architecture 
 
 ![Agent Architecture](.github/architecture.png)
 
@@ -47,7 +47,7 @@ The system's knowledge foundation is built from curated resources:
 1. **Input Processing:** Learner's query + system prompt (including profile data, history, KG state)
 2. **Dynamic System Prompt:** Enriched with conversation history, relevant items from memory, user's knowledge state, and KG communities
 3. **Orchestration:**  
-   - **Retrieval Function Tools** (`retrieve_node`, `get_prerequisites`, `update_concept_status`)
+   - **Retrieval Function Tools** (`retrieve_node`, `retrieve_sections`, `retrieve_prerequisites`, `update_status`)
    - **Memory Function Tools** (`store_memory`, `retrieve_memory`, `delete_memory`)
    - **Session Manager:** Learning and Evaluation modes with planning and execution phases
 
